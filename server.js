@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const app = express();
-const HTTP_PORT = 8080;
+const HTTP_PORT = process.env.PORT || 8080;
 const ListingsDB = require("./modules/listingsDB.js");
 const db = new ListingsDB();
 app.use(express.json())
